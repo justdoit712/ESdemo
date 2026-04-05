@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: product-search
+
+  elasticsearch:
+    uris:
+      - http://192.168.5.129:9200
+    username: "elastic"
+    password: "123456"
+    connection-timeout: 5s
+    socket-timeout: 30s
+
+  datasource:
+    url: "jdbc:mysql://127.0.0.1:3306/es?useSSL=false&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8"
+    username: root
+    password: 123456
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+app:
+  es:
+    springdata:
+      index-name: demo_springdata
+    officialclient:
+      index-name: demo_officialclient
