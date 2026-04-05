@@ -12,10 +12,9 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Coordinates one-way synchronization from MySQL product data to Elasticsearch.
+ * MySQL 商品数据到 Elasticsearch 的单向同步编排服务。
  *
- * <p>This service only orchestrates the pipeline and does not include SQL details
- * or Elasticsearch persistence details directly.
+ * <p>该服务只负责同步流程编排，不直接包含 SQL 细节和 Elasticsearch 持久化细节。
  */
 @Service
 public class ProductSyncService {
@@ -30,9 +29,9 @@ public class ProductSyncService {
     private ProductEsWriteService productEsWriteService;
 
     /**
-     * Executes one full synchronization for all active products.
+     * 执行一次全量同步（仅同步未删除商品）。
      *
-     * @return summary statistics for this synchronization run
+     * @return 本次同步的统计摘要
      */
     public ProductSyncResult syncActiveProductsToEs() {
         long start = System.currentTimeMillis();

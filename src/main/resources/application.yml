@@ -22,6 +22,6 @@ mybatis:
 app:
   es:
     springdata:
-      index-name: demo_springdata
+      index-name: product
     officialclient:
-      index-name: demo_officialclient
+      index-name: product
