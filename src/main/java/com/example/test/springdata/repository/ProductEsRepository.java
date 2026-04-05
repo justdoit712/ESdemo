@@ -1,4 +1,4 @@
-package com.example.test.springdata.repository.es;
+package com.example.test.springdata.repository;
 
 import com.example.test.springdata.document.ProductDocument;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;

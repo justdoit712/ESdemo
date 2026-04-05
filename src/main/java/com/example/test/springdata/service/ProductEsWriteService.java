@@ -1,7 +1,7 @@
 package com.example.test.springdata.service;
 
 import com.example.test.springdata.document.ProductDocument;
-import com.example.test.springdata.repository.es.ProductEsRepository;
+import com.example.test.springdata.repository.ProductEsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
