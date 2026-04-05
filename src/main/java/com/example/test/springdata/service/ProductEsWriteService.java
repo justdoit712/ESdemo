@@ -2,6 +2,7 @@ package com.example.test.springdata.service;
 
 import com.example.test.springdata.document.ProductDocument;
 import com.example.test.springdata.repository.es.ProductEsRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,11 +13,8 @@ import java.util.Objects;
 @Service
 public class ProductEsWriteService {
 
-    private final ProductEsRepository productEsRepository;
-
-    public ProductEsWriteService(ProductEsRepository productEsRepository) {
-        this.productEsRepository = productEsRepository;
-    }
+    @Autowired
+    private ProductEsRepository productEsRepository;
 
     public ProductDocument save(ProductDocument document) {
         if (document == null) {
